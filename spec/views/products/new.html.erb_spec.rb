@@ -6,6 +6,7 @@ RSpec.describe "products/new", type: :view do
       :name => "",
       :price => 1
     ))
+    assign(:foo, {foo: :bar})
   end
 
   it "renders new product form" do
@@ -17,5 +18,7 @@ RSpec.describe "products/new", type: :view do
 
       assert_select "input#product_price[name=?]", "product[price]"
     end
+
+    assert_select "label#foo-label", "bar"
   end
 end
