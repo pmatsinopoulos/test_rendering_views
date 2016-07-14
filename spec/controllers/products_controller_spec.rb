@@ -19,6 +19,7 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe ProductsController, type: :controller do
+  render_views
 
   # This should return the minimal set of attributes required to create a valid
   # Product. As you add validations to Product, be sure to
